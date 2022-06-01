@@ -10,6 +10,7 @@ import DisplayFavouraites from './components/pages/DisplayFavourites';
 import FeaturedPlaylists from './components/pages/FeaturedPlaylists';
 import CustomPlaylists from './components/pages/CustomPlaylists';
 import SelectPlaylistsData from './components/pages/SelectPlaylistsData';
+import AboutPage from './components/pages/AboutPage';
 
 function App() {
 
@@ -23,6 +24,7 @@ function App() {
           <Route path="/home" element={<HomePage />} />
           <Route path="/register" element={< Register />} />
           <Route path="/login" element={<Login />} />
+          <Route path="/about" element={<AboutPage />} />
           <Route path="/spotifyAuth" element={<SpotifyAuth />} />
           <Route path="/getPlaylists" element={<GetPlaylists/>}/>
           <Route path="/search" element={<Search />} />

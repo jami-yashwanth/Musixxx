@@ -49,7 +49,6 @@ router.post('/login', async(req,res) => {
 })
 
 router.post('/addFavs',verify, async(req,res) => {
-    console.log("idADD=",req.body)
     try{
         await User.findOneAndUpdate(
             {username : req.user.username},

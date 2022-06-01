@@ -29,6 +29,7 @@ const Navbar = () => {
                     <Link to="/customPlaylists"  className="hover:bg-white hover:transition p-2 rounded-full hover:text-red-300">My Playlists</Link>
                     <Link to="/featuredPlaylists"  className="hover:bg-white hover:transition p-2 rounded-full hover:text-red-300">Featured Playlists</Link>
                     <Link to="/getPlaylists"  className="hover:bg-white hover:transition p-2 rounded-full hover:text-red-300">My Spotify Playlists</Link>
+                    <Link to="/about"  className="hover:bg-white hover:transition p-2 rounded-full hover:text-red-300">About</Link>
                   </ul>
                 </div>
                 <div class="hidden lg:flex lg:items-center">
@@ -47,13 +48,14 @@ const Navbar = () => {
                 </div>
               </div>
                 {toggle &&
-                <div class="grid place-items-center">
+                <div class="grid place-items-center lg:hidden">
                   <ul class="flex flex-col mt-4 lg:flex-row lg:space-x-8 lg:mt-0 lg:text-sm lg:font-medium">
                     <Link to="/search" className="hover:bg-white hover:transition p-2 rounded-full hover:text-red-300">Search</Link>
                     <Link to="/displayFavs"  className="hover:bg-white hover:transition p-2 rounded-full hover:text-red-300">My Favourites</Link>
                     <Link to="/customPlaylists"  className="hover:bg-white hover:transition p-2 rounded-full hover:text-red-300">My Playlists</Link>
                     <Link to="/featuredPlaylists"  className="hover:bg-white hover:transition p-2 rounded-full hover:text-red-300">Featured Playlists</Link>
                     <Link to="/getPlaylists"  className="hover:bg-white hover:transition p-2 rounded-full hover:text-red-300">My Spotify Playlists</Link>
+                    <Link to="/about"  className="hover:bg-white hover:transition p-2 rounded-full hover:text-red-300">About</Link>
                     <Link to="/home"  className="hover:bg-white hover:transition p-2 rounded-full hover:text-red-300"><button onClick={Logout} >Log out</button></Link>
                   </ul>
               </div>
@@ -68,7 +70,7 @@ const Navbar = () => {
                 <div class="hidden justify-between items-center w-full lg:flex lg:w-auto">
                   <ul class="flex flex-col mt-4 md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium">
                     <Link to="/home" className="hover:bg-white hover:transition p-2 rounded-full hover:text-red-300">Home</Link>
-                    <Link to="/displayFavs"  className="hover:bg-white hover:transition p-2 rounded-full hover:text-red-300">About</Link>
+                    <Link to="/about"  className="hover:bg-white hover:transition p-2 rounded-full hover:text-red-300">About</Link>
                   </ul>
                 </div>
                 <div class="hidden lg:flex lg:items-center">
@@ -91,7 +93,7 @@ const Navbar = () => {
                 <div class="grid place-items-center">
                   <ul class="flex flex-col mt-4 lg:flex-row lg:space-x-8 lg:mt-0 lg:text-sm lg:font-medium">
                     <Link to="/search" className="hover:bg-white hover:transition p-2 rounded-full hover:text-red-300">Home</Link>
-                    <Link to="/displayFavs"  className="hover:bg-white hover:transition p-2 rounded-full hover:text-red-300">About</Link>
+                    <Link to="/about"  className="hover:bg-white hover:transition p-2 rounded-full hover:text-red-300">About</Link>
                     <Link to="/login"  className="hover:bg-white hover:transition p-2 rounded-full hover:text-red-300"><button onClick={Logout} >Log in</button></Link>
                     <Link to="/register"  className="hover:bg-white hover:transition p-2 rounded-full hover:text-red-300"><button onClick={Logout} >Register</button></Link>
                   </ul>

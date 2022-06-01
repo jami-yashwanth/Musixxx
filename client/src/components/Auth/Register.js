@@ -33,6 +33,7 @@ const Register = () => {
     if (res.data.status !== "ok") {
       alert(message);
     } else {
+      alert("Registration succesfull")
       navigate("/login");
     }
     setEmail("");

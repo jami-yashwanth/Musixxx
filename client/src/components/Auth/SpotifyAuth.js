@@ -8,7 +8,8 @@ const SpotifyAuth = () => {
     // Credentials from spotify API dashboard
     const client_id = "ea3c062af2ec43fa895909ddd02bbb9c";
     const Authorize = "https://accounts.spotify.com/authorize";
-    const redirect_uri = "https://musixxx.netlify.app/";
+    // const redirect_uri = "https://musixxx.netlify.app/";
+    const redirect_uri = "http://localhost:3000/home";
 
     const handleClick = () => {
         const url = `${Authorize}?client_id=${client_id}&redirect_uri=${encodeURI(redirect_uri)}&response_type=token&scope=playlist-read-private`;

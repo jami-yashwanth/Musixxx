@@ -22,7 +22,9 @@ const Login = () => {
           email,
           password,
         });
+        console.log("res=",res);
         if (res.data.status === "ok") {
+          alert("login succesfull")
           if (res.data.token) {
             localStorage.setItem("user-token", res.data.token);
             navigate("/spotifyAuth");
