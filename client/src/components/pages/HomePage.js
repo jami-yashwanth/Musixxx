@@ -4,13 +4,6 @@ import { Link, useNavigate } from "react-router-dom";
 import Navbar from "./Navbar";
 
 const HomePage = () => {
-  const quotes = ["Without Music ,Life would be a mistake",
-  "Where words leave off, music begins",
-  "Music, once admitted to the soul, becomes a sort of spirit, and never dies",
-  "Music is healing. Music holds things together",
-  "Music is the strongest form of magic",
-  'Music acts like a magic key, to which the most tightly closed heart opens.',
-  'Music is the literature of the heart; it commences where speech ends.']
   const [token , setToken] = useState("");
   const [spotifyToken, setSpotifyToken] = useState("");
   const [randIdx,setRandIdx] = useState(0);
