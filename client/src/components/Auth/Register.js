@@ -28,7 +28,7 @@ const Register = () => {
       spotifyPassword: spotifyPassword,
     };
     const message = "Username or Email already taken !!!";
-    const res = await axios.post("https://musixxxx.herokuapp.com/register", credentials);
+    const res = await axios.post("https://musixx.onrender.com/register", credentials);
     console.log("response = ", res);
     if (res.data.status !== "ok") {
       alert(message);

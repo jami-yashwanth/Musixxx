@@ -4,26 +4,26 @@ import { Link, useNavigate } from "react-router-dom";
 import Navbar from "./Navbar";
 
 const HomePage = () => {
-  const [token , setToken] = useState("");
+  const [token, setToken] = useState("");
   const [spotifyToken, setSpotifyToken] = useState("");
-  const [randIdx,setRandIdx] = useState(0);
-  
+  const [randIdx, setRandIdx] = useState(0);
+
 
   const navigate = useNavigate();
 
   useEffect(() => {
-      setInterval(() => {
-        setRandIdx(Math.floor(Math.random() * quotes.length))
-      },5000)
-      if(window.location.hash){
-        const hash = window.location.hash;
-        const access_token = hash.split("&")[0].split("=")[1];
-        localStorage.setItem("spotify-token", access_token);
-        navigate("/home");
-      }
-      setSpotifyToken(localStorage.getItem("spotify-token"));
-      setToken(localStorage.getItem("user-token"));
-  },[])
+    // setInterval(() => {
+    //   setRandIdx(Math.floor(Math.random() * quotes.length))
+    // },5000)
+    if (window.location.hash) {
+      const hash = window.location.hash;
+      const access_token = hash.split("&")[0].split("=")[1];
+      localStorage.setItem("spotify-token", access_token);
+      navigate("/home");
+    }
+    setSpotifyToken(localStorage.getItem("spotify-token"));
+    setToken(localStorage.getItem("user-token"));
+  }, [])
 
   return (
     <div className="bg-searchPage bg-cover bg-center bg-fixed min-h-screen  text-white">
@@ -43,7 +43,7 @@ const HomePage = () => {
             <p className="mt-2 md:mt-5 hover:animate-bounce">➡️ Spotify featured playlists</p>
           </div>
         </div>
-        {!token && 
+        {!token &&
           <div className="lg:hidden absolute top-3 right-2 text-center px-3 py-1 rounded-full bg-white text-red-300">
             <a href="/login">Login</a>
           </div>
